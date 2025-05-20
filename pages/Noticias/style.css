@@ -26,7 +26,6 @@ body {
     display: flex;
     gap: 20px;
     padding: 40px 20px;
-    background: #f3f3f3;
     justify-content: center;
     align-items: flex-start;
     max-width: 1200px;
@@ -34,25 +33,9 @@ body {
     margin-top: 20px;    
     flex-wrap: wrap;
   }
-  
-  .noticia {
-    position: relative;
-    background: #eee;      
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-  
+
   .noticia.destaque { width: 800px; height: 400px; }
   .noticia.pequena { width: 350px; height: 190px; }
-  
-  .noticias-laterais {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
   
   .overlay {
     position: absolute;
@@ -90,19 +73,6 @@ body {
     padding: 15px 30px;
     position: relative; 
     z-index: 1;
-  }
-  
-  .noticias {
-    display: flex;
-    gap: 20px;
-    padding: 40px 20px;
-    background: #f3f3f3;
-    justify-content: center;
-    align-items: flex-start;
-    max-width: 1200px;
-    margin: 0 auto;       
-    margin-top: 20px;     
-    flex-wrap: wrap;
   }
   
   .noticia {
@@ -299,3 +269,90 @@ body {
     padding: 12px 0;
     font-size: 14px;
   }
+
+  footer {
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  background: white;
+}
+
+.footer-left {
+  background: #fcb900;
+  padding: 60px 20px;
+  width: 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top-right-radius: 250px;
+}
+
+.footer-left .logo {
+  max-width: 120px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  padding: 60px 40px;
+}
+
+.column {
+  flex: 1;
+  margin: 0 20px;
+}
+
+.column h4 {
+  color: #fcb900;
+  border-bottom: 2px solid #fcb900;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+}
+
+.column p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.column a {
+  color: #333;
+  text-decoration: none;
+}
+
+.column a:hover {
+  text-decoration: underline;
+}
+
+.news-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.news-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.news-text p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.news-text small {
+  font-size: 12px;
+  color: gray;
+}
+
+.footer-bottom {
+  background: linear-gradient(to right, #0e1b59, #1f2e8a);
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
