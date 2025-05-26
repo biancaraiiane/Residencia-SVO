@@ -1,12 +1,13 @@
 class Header extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-            <header class="main-header">
-                <div class="headerPhone">
+            <div class="headerPhone">
                     <p>(79) 3234-6022</p>
                     <p>(79) 99191-5391</p>
                     <p>Rua Campo do Brito, 551 - Bairro São José, CEP: 49048-100 Aracaju/SE</p>
-                </div>
+            </div>    
+                
+            <header class="main-header">
                 <div class="header-container">
                     <div class="logo">
                         <img src="../assets/logo svo branco.png" alt="Logo FSPH">
