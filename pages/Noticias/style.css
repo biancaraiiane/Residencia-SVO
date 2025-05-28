@@ -4,7 +4,7 @@ body {
 }
 
 .top-bar {
-  background: #182b6d;
+  background: radial-gradient(#131632, #3B4498, #161A39);
   color: white;
   display: flex;
   justify-content: center;
@@ -68,11 +68,15 @@ body {
 .noticia.destaque {
   width: 800px;
   height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .noticia.pequena {
   width: 350px;
   height: 190px;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .noticias-laterais {
@@ -125,8 +129,6 @@ body {
 }
 
 .noticia-item .conteudo h3 a {
-  color: #666 !important; /* <-- cor cinza para links */
-  text-decoration: none !important; /* <-- remove sublinhado */
   font-weight: bold;
 }
 
@@ -217,9 +219,34 @@ footer {
 }
 
 .footer-bottom {
-  background: linear-gradient(to right, #0e1b59, #1f2e8a);
-  color: white;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
+    background: radial-gradient(#131632, #3B4498, #161A39);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+}
+a{
+      text-decoration: none;
+}
+
+.menu-item {
+  color: #ffffff;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+}
+.container-button> a {
+  color: black;
+  font-weight: 600;
+}
+.color-black{
+  color: black;
+}
+h3 {
+    margin: 10px 0px 4px 0px;
+}
+a:hover{
+  color: #666;
 }
