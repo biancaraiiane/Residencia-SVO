@@ -137,14 +137,16 @@ body {
   color: #666; /* <-- cor cinza para o resumo */
 }
 
-
 footer {
   font-family: Arial, sans-serif;
 }
 
 .footer-container {
   display: flex;
-  background: white;
+  background-image: url('/assets/fundo_footer.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .footer-left {
