@@ -6,6 +6,7 @@ export function navigateTo(page) {
 export async function handleLocation() {
   const routes = {
     "/": "/pages/home.html",
+    "/solicitacao-de-remocao": "/pages/solicitacao-de-remocao.html",
   };
 
   const path = window.location.pathname;

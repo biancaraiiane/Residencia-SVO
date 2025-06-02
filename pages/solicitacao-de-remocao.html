@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Solicitação de Remoção - SVO</title>
-  
+
   <!-- CSS -->
   <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/solicitacao.css">
+  <link rel="stylesheet" href="../css/footer.css">
 </head>
 
 <body>
 
   <!-- Cabeçalho (componente) -->
   <main-header></main-header>
-  <script src="../components/header.js" type="module"></script>
-
   <!-- Seção do banner -->
   <section class="hero">
     <div class="banner">
@@ -40,60 +40,15 @@
     </div>
   </section>
 
-  <!-- Rodapé (componente) -->
-<footer id="footer">
-  <div class="footerTop">
-    <div class="logoContainer">
-      <img class="logoFooter" src="../assets/logo svo branco.png" alt="Logo">
-    </div>
+  <main-footer></main-footer>
 
-    <div class="footerSection">
-      <h3>INFORMAÇÕES</h3>
-      <p>Tel: (79) 3234-6022</p>
-      <p>Tel: (79) 99191-5391</p>
-      <p>End: Rua Campo do Brito, 551 - Bairro São José, CEP: 49048-100 Aracaju/SE</p>
-    </div>
-
-    <div class="footerSection">
-      <h3>SERVIÇOS SVO</h3>
-      <a href="#">Solicitação de remoção</a>
-      <a href="#">Consulta de protocolo</a>
-    </div>
-
-    <div class="footerSection newsSection">
-      <h3>ÚLTIMAS NOTÍCIAS</h3>
-
-      <div class="newsItem">
-        <img src="../assets/noticia1.jpg" alt="notícia">
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span>01 de janeiro de 2025</span>
-        </div>
-      </div>
-
-      <div class="newsItem">
-        <img src="../assets/noticia2.jpg" alt="notícia">
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span>01 de janeiro de 2025</span>
-        </div>
-      </div>
-
-      <div class="newsItem">
-        <img src="../assets/noticia3.jpg" alt="notícia">
-        <div>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <span>01 de janeiro de 2025</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footerCopyright">
-    <p>© SVO - Serviço de Verificação de Óbito 2025</p>
-  </div>
-</footer>
-
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="../js/components/header.js" type="module"></script>
+  <script src="../js/components/footer.js" type="module"></script>
 
 </body>
+
 </html>
