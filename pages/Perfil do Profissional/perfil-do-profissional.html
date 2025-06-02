@@ -4,263 +4,305 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVO - Serviço de Verificação de Óbito</title>
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css"> <!--estilo do footer-->
+
+ <style> 
+ * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Arial', sans-serif;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
     
-    <style>
-         
-        * {
+    body {
+        background-color: #f0f0f0;
+        line-height: 1.3;
+        overflow-x: hidden;
+    }
+    
+    /* Hero Section */
+    .hero {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        background-color: #3B4498;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center; 
+        align-items: center;    
+        gap: 80px;
+        margin-bottom: 100px;
+    }
+
+    .foto_hero {
+        border-left: 30px solid #FBB802;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 430px;
+        height: 400px;
+        overflow: hidden;
+        margin-left: 30px;
+    }
+
+    #mulher {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .texto_hero {
+        color: white;
+        text-align: left;
+        max-width: 500px;         
+        word-wrap: break-word;   
+        overflow-wrap: break-word;
+        text-shadow: -4px 2px 2px #0000004f;
+    }
+
+    .texto_hero h1 {
+        padding-bottom: 8px;
+        font-weight: 700;
+        font-size: 30px;
+    }
+
+    .texto_hero p {
+        font-weight: 500;
+        font-style: italic;
+        font-size: 16px;
+    }
+
+    /* Títulos das seções */
+    .section-header {
+        background-color: #FBB802;
+        padding: 8px;
+        width: fit-content;
+        border-radius: 0px 20px 55px 0px;
+        margin-top: 150px;
+        margin-bottom: 40px;
+    }
+
+    .section-title {
+        margin: auto;
+        font-style: italic;
+        font-size: 26px;
+        font-weight: 800;
+        margin-left: 80px;
+        margin-right: 50px;
+        color: #3B4498;
+        white-space: nowrap;
+    }
+
+    /* Conteúdo das seções */
+    .journey-content,
+    .publications-list {
+        font-size: 16px;
+        text-align: justify;
+        margin: auto;
+        max-width: 80%;
+    }
+
+    .text-block p,
+    .degree-description,
+    .publication-item p {
+        line-height: 1.6;
+    }
+
+    span {
+        font-style: italic;
+    }
+
+    .negrito {
+        font-weight: bolder;
+        font-style: normal;
+    }
+    
+    /* Seção de Formação Acadêmica com Grid */
+    .education-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        max-width: 90%;
+        margin: 80px auto 0;
+        list-style: none;
+        padding: 0;
+    }
+
+    .education-item {
+        background-color: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: 0;
+    }
+
+    .degree-title {
+        color: #3B4498;
+        margin-bottom: 10px;
+    }
+
+    .institution-period {
+        display: block;
+        margin-bottom: 10px;
+        color: #666;
+    }
+
+    /* Lista de Publicações */
+    .publications-list {
+        width: auto;
+        max-width: 75%;
+        align-items: center;
+        font-size: 16px;
+        text-align: justify;
+        margin: auto;
+        margin-bottom: 150px;
+        list-style: none;
+    }
+
+    .publication-item {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+
+    .author-name {
+        font-weight: bolder;
+        font-style: normal;
+    }
+
+    /* Responsividade */
+    @media (min-width: 1440px) {
+        .hero {
+            gap: 130px;
+        }
+    }
+
+    /* Tablets retrato/Desktops pequenos */
+    @media (max-width: 1024px) {
+        .hero {
+            gap: 50px;
+        }
+
+        .section-header {
+            margin-top: 130px;
+        }
+
+        .section-title {
+            margin-left: 50px;
+            margin-right: 30px;
+        }
+    }
+
+    @media (max-width: 950px) {
+        .hero {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            height: auto;
+        } 
+        .foto_hero {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-
-        html {
-           scroll-behavior: smooth;
-        }
-        
-        body {
-            background-color: #f0f0f0;
-            line-height: 1.3;
-            overflow-x: hidden;
-        }
-        
-       .hero {
-            width: 100%;
+            width: 300px;
             height: auto;
-            min-height: 500px;
-            background-color: #3B4498;
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            justify-content: center; 
-            align-items: center;    
-            gap: 80px; /* distância entre a imagem e o texto */
-            margin-bottom: 100px;
-       }
-
-        .foto_hero {
-            border-left: 30px solid #FBB802;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 400px;
-            height: 400px;
-            overflow: hidden;
-            margin-left: 30px;
-        }
-
-        #mulher {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            border: 10px solid #FBB802;
         }
 
         .texto_hero {
-            color: white;
-            text-align: left;
-            max-width: 500px;         
-            word-wrap: break-word;   
-            overflow-wrap: break-word;
-            text-shadow: -4px 2px 2px #0000004f;
+            text-align: center;  
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-header {
+            margin-top: 90px;
+        }
+
+        .section-title {
+            font-size: 18px;
+        }
+
+        .journey-content,
+        .education-list,
+        .publications-list {
+            max-width: 90%;
+        }
+
+        .education-list {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .hero {
+            width: 100%;
+            height: 300px;
+            overflow-x: hidden;
+            margin: 0;
+            padding: 40px 10px;
+        }
+
+        .foto_hero {
+            border: 5px solid #FBB802;
+            width: 200px;
+            align-items: center;
+            margin-left: 0;
+        }
+
+        .texto_hero {
+            text-align: center;
+            max-width: 90%;
+            margin-top: 20px;
         }
 
         .texto_hero h1 {
-            padding-bottom: 8px;
-            font-weight: 800;
-            font-style: italic;
-            font-size: 30px;
+            font-size: 18px;
         }
 
         .texto_hero p {
-            font-weight: 500;
-            font-style: italic;
-            font-size: 16px;
+            font-size: 14px;
         }
 
-        .titulo {
-            background-color: #FBB802;
-            padding: 8px;
-            width: fit-content;
-            border-radius: 0px 20px 55px 0px;
-            margin-top: 150px;
+        .section-header {
+            margin-top: 50px;
         }
 
-        .titulo h1 {
-            margin: auto;
-            font-style: italic;
-            font-size: 26px;
-            font-weight: 800;
-            margin-left: 80px;
-            margin-right: 50px;
-            color: #3B4498;
-            white-space: nowrap;
+        .section-title {
+            font-size: 12px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
-        .texto_jornada {
-            font-size: 16px;
-            text-align: justify;
-            margin: auto;
-            max-width: 80%;
-            margin-top: 40px;
-            align-items: center;
+        .text-block p,
+        .degree-description,
+        .publication-item p {
+            font-size: 14px;
         }
 
-        .texto_jornada p {
-            padding: 7px;
+        .degree-title,
+        .institution-period {
+            font-size: 14px;
         }
 
-        .formacao_academica .titulo {
-            margin-bottom: 40px;
+        .education-item,
+        .publication-item {
+            padding: 15px;
         }
+    }
+</style>
 
-        span {
-            font-style: italic;
-        }
-
-        .negrito {
-            font-weight: bolder;
-            font-style: normal;
-        }
-        
-        .listas {
-            width: auto;
-            max-width: 75%;
-            align-items: center;
-            font-size: 16px;
-            text-align: justify;
-            margin: auto;
-            margin-top: 40px;
-        }
-
-        .listas li{
-            padding: 20px 20px 20px 10px;
-        }
-
-        ul li::marker {
-            color: #FBB802;
-            font-size: 20px;
-        }
-
-        /*Telas maiores*/
-        @media (min-width: 1440px) {
-            .hero {
-                gap: 100px;
-            }
-            
-        }
-
-        /*Tablets retrato/Desktops pequenos*/
-        @media (max-width: 1024px) {
-            .hero {
-                gap: 50px;
-            }
-
-            .titulo {
-                margin-top: 130px;
-            }
-
-
-            .titulo h1 {
-                margin-left: 50px;
-                margin-right: 30px;
-            }
-  
-        }
-
-        @media (max-width: 950px) {
-            .hero {
-                flex-direction: column;
-                align-items: center; /* ← IMPORTANTE */
-                text-align: center;
-                height: auto; /* ← PERMITE CRESCER COM CONTEÚDO */
-            } 
-            .foto_hero {
-                margin: 0;
-                padding: 0;
-                width: 300px;
-                height: auto;
-                border: 10px solid #FBB802;
-            }
-
-            .texto_hero {
-                text-align: center;  
-            }
-        }
-
-        @media (max-width: 768px) {
-            .titulo {
-                margin-top: 90px;
-            }
-
-            .titulo h1 {
-                font-size: 18px;
-            }
-
-        }
- 
-
-        @media (max-width: 500px) {
-             .hero {
-                width: 100%;
-                height: 300px;
-                overflow-x: hidden; /* impede scroll lateral */
-                margin: 0; /* zera qualquer margem acidental */
-                padding: 40px 10px;
-             }
-
-            .foto_hero {
-                border: 5px solid #FBB802;
-                width: 200px;
-                align-items: center;
-                margin-left: 0;
-            }
-
-
-            .texto_hero {
-                text-align: center;
-                max-width: 90%;
-                margin-top: 20px;
-            }
-
-            .texto_hero h1 {
-                font-size: 18px;
-            }
-
-            .texto_hero p {
-                font-size: 14px;
-            }
-
-            .titulo {
-                margin-top: 50px;
-            }
-
-            .titulo h1 {
-                font-size: 12px;
-                margin-left: 10px;
-                margin-right: 10px;
-
-            }
-            p {
-                font-size: 8px;
-            }
-
-            h3, span {
-                font-size: 10px;
-            }
-        }
-
-        
-
-    </style>
 </head>
 <body>   
     <header>
     </header>
-    
-    <section class="hero">
 
+    <!-- Hero -->
+    <section class="hero">
             <div class="foto_hero"><img src="../../assets/mulher 2.png" alt="Foto" id="mulher"></div>
             
             <div class="texto_hero">
@@ -271,70 +313,91 @@
     </section>
     
    
-    <main>
-        <section class="jornada_academica">
+    <main class="career-container">
+        <!-- Seção Jornada Acadêmica -->
+        <section class="journey-section" aria-labelledby="journey-title">
+            <header class="section-header">
+                <h1 id="journey-title" class="section-title">JORNADA ACADÊMICA</h1>
+            </header>
             
-            <div class="titulo">
-                <h1>JORNADA ACADÊMICA</h1>
-            </div>
-
-            <div class="texto_jornada">
-                    <p> Minha trajetória na área da saúde começou com o curso técnico em Análises Clínicas, uma formação que me proporcionou o primeiro contato direto com a rotina laboratorial e com o trabalho com materiais biológicos. Esse período foi crucial para entender as etapas iniciais do diagnóstico e a importância de um trabalho preciso no laboratório, uma vez que é fundamental para a saúde pública e para o bem-estar dos pacientes. A experiência adquirida foi a base para o desenvolvimento do meu interesse em áreas mais especializadas dentro da saúde, especialmente no que diz respeito à análise de patologias e doenças infecciosas. Ao longo da graduação em Biomedicina, tive a oportunidade de aprofundar meus conhecimentos em diversas disciplinas, como patologia, microbiologia e diagnóstico laboratorial. Durante esse período, participei ativamente de projetos de extensão e pesquisa, os quais se concentraram no estudo de doenças infecciosas e na análise da relação dessas doenças com óbitos por causas mal definidas, um campo de estudo que passou a me fascinar ainda mais e despertou meu interesse pela atuação em serviços de verificação de óbito (SVO).</p>
-
-                    <p> Após a conclusão da graduação, busquei uma especialização em Tanatologia e Investigação das Causas de Morte, uma formação que me permitiu entrar em contato mais direto com os aspectos técnicos e éticos do trabalho realizado pós-morte. Durante essa especialização, tive a oportunidade de estudar profundamente os protocolos de autópsia clínica e a importância dos laudos tanatológicos no contexto da saúde pública. Também participei de diversas atividades práticas em serviços de anatomia patológica e necropsia, experiências que foram fundamentais para entender a complexidade dos processos envolvidos na investigação das causas de morte e a necessidade de precisão e ética em cada etapa do processo. Essa formação foi decisiva para que eu compreendesse com mais profundidade a relevância do SVO na construção de dados epidemiológicos confiáveis, os quais são essenciais para o planejamento e implementação de ações em saúde coletiva.</p>
-
-                    <p> Atualmente, faço parte da equipe de um Serviço de Verificação de Óbito, onde sou responsável pela análise e investigação de mortes naturais sem causa determinada. Minha atuação inclui a produção de laudos tanatológicos detalhados, a comunicação com os familiares das vítimas, a colaboração estreita com órgãos de saúde pública e o apoio à formação de novos profissionais que ingressam na área. Considero que uma formação sólida e um compromisso constante com a ciência são essenciais para garantir que o serviço prestado seja técnico, ético e humanizado. Acredito que, por meio de uma atuação profissional bem fundamentada, podemos contribuir significativamente para a melhoria da saúde pública, fornecendo dados precisos e essenciais para a vigilância epidemiológica e, consequentemente, para o aprimoramento das políticas de saúde.</p>
-
+            <article class="journey-content">
+                <div class="text-block">
+                    <p>Minha trajetória na área da saúde começou com o curso técnico em Análises Clínicas, uma formação que me proporcionou o primeiro contato direto com a rotina laboratorial e com o trabalho com materiais biológicos. Esse período foi crucial para entender as etapas iniciais do diagnóstico e a importância de um trabalho preciso no laboratório, uma vez que é fundamental para a saúde pública e para o bem-estar dos pacientes. A experiência adquirida foi a base para o desenvolvimento do meu interesse em áreas mais especializadas dentro da saúde, especialmente no que diz respeito à análise de patologias e doenças infecciosas.</p>
+                    
+                    <p>Durante a graduação em Biomedicina, tive a oportunidade de aprofundar meus conhecimentos em diversas disciplinas, como patologia, microbiologia e diagnóstico laboratorial. Participei ativamente de projetos de extensão e pesquisa, os quais se concentraram no estudo de doenças infecciosas e na análise da relação dessas doenças com óbitos por causas mal definidas.</p>
                 </div>
-            </section>
-             
-            <section class="formacao_academica">
                 
-                <div class="titulo">
-                    <h1>FORMAÇÃO ACADÊMICA</h1>
+                <div class="text-block">
+                    <p>Após a conclusão da graduação, busquei uma especialização em Tanatologia e Investigação das Causas de Morte, uma formação que me permitiu entrar em contato mais direto com os aspectos técnicos e éticos do trabalho realizado pós-morte. Durante essa especialização, tive a oportunidade de estudar profundamente os protocolos de autópsia clínica e a importância dos laudos tanatológicos no contexto da saúde pública.</p>
                 </div>
-    
-                <div class="formacoes">
-                        <ul class="listas">
-                         <li><h3>Bacharelado em Biomedicina</h3>
-                            <span>Universidade Federal da Saúde, 2014-2018</span>
-                            <p>Durante a graduação, aprofundou-se em disciplinas fundamentais como patologia, microbiologia, imunologia e saúde pública, consolidando uma base sólida para atuação em diversas áreas da saúde. Participou ativamente de projetos de extensão e pesquisa, com foco especial em doenças infecciosas e investigação de óbitos por causas mal definidas, o que proporcionou experiência prática em técnicas laboratoriais avançadas e análise clínica. Além disso, desenvolveu habilidades em interpretação de exames laboratoriais, metodologias de diagnóstico e aplicação de protocolos científicos para garantir a qualidade e a confiabilidade dos resultados.</p></li>
-                        
-                         <li><h3>Técnico em Análises Clínicas</h3>
-                            <span>Instituto Técnico São Lucas, 2011-2013</span>
-                            <p>Curso técnico focado na execução precisa de exames laboratoriais, incluindo coleta e preparo de amostras biológicas para análises microbiológicas, hematológicas e bioquímicas. Durante o período de formação, adquiriu experiência prática em rotinas de laboratório, controle de qualidade, biossegurança e manutenção de equipamentos. A formação técnica proporcionou uma base sólida para o trabalho em laboratórios clínicos, públicos e privados, garantindo competências essenciais para a realização de exames diagnósticos com eficiência e segurança.</p></li>
-                        
-                         <li><h3>Especialização em Tanatologia e Investigação das Causas de Morte</h3>
-                            <span>Centro Universitário Vitae, 2019-2020</span>
-                            <p>Especialização voltada para o estudo interdisciplinar da morte, abordando aspectos biológicos, éticos, legais e sociais. Durante o curso, desenvolveu competências específicas para a investigação de óbitos naturais sem diagnóstico prévio, com ênfase em anatomia patológica, técnicas de necropsia, documentação médico-legal e ética profissional. A formação também incluiu o desenvolvimento de habilidades para atuar em Serviços de Verificação de Óbitos (SVO), contribuindo para a melhoria da qualidade das investigações e o esclarecimento das causas de morte, fundamentais para a saúde pública e para a justiça.</p></li>
-
-                        <li><h3>Mestrado Profissional em Ciências da Saúde</h3>
-                            <span>Universidade Estadual da Vida, 2021-2023</span>
-                            <p>Mestrado voltado para a pesquisa aplicada à melhoria dos processos de investigação de óbitos naturais. Realizou dissertação focada na integração entre laboratórios clínicos e Serviços de Verificação de Óbitos, propondo estratégias para aprimorar a acurácia diagnóstica e a agilidade na confirmação das causas de morte. Durante o mestrado, aprofundou conhecimentos em metodologia científica, análise estatística e gestão de dados clínicos, além de promover a articulação entre equipes multidisciplinares para fortalecer a eficiência dos sistemas de saúde. A pesquisa contribuiu para avanços no campo da Tanatologia e da saúde pública, com potencial impacto na formulação de políticas e protocolos técnicos.</p></li>
-                        
-                        </ul>
+                
+                <div class="text-block">
+                    <p>Atualmente, faço parte da equipe de um Serviço de Verificação de Óbito, onde sou responsável pela análise e investigação de mortes naturais sem causa determinada. Minha atuação inclui a produção de laudos tanatológicos detalhados, a comunicação com os familiares das vítimas e a colaboração estreita com órgãos de saúde pública.</p>
                 </div>
-                   
-            </section>
+            </article>
+        </section>
+        
+        <!-- Seção Formação Acadêmica -->
+        <section class="education-section" aria-labelledby="education-title">
+            <header class="section-header">
+                <h1 id="education-title" class="section-title">FORMAÇÃO ACADÊMICA</h1>
+            </header>
             
-            <section class="producoes_bibliograficas">
-               
-                <div class="titulo">
-                    <h1 >PRODUÇÕES BIBLIOGRÁFICAS</h1>
-                </div>
+            <ul class="education-list">
+                <li class="education-item">
+                    <h2 class="degree-title">Bacharelado em Biomedicina</h2>
+                    <span class="institution-period">Universidade Federal da Saúde, 2014-2018</span>
+                    <p class="degree-description">Durante a graduação, aprofundou-se em disciplinas fundamentais como patologia, microbiologia, imunologia e saúde pública, consolidando uma base sólida para atuação em diversas áreas da saúde.</p>
+                </li>
+                
+                <li class="education-item">
+                    <h2 class="degree-title">Técnico em Análises Clínicas</h2>
+                    <span class="institution-period">Instituto Técnico São Lucas, 2011-2013</span>
+                    <p class="degree-description">Curso técnico focado na execução precisa de exames laboratoriais, incluindo coleta e preparo de amostras biológicas para análises microbiológicas, hematológicas e bioquímicas.</p>
+                </li>
+                
+                <li class="education-item">
+                    <h2 class="degree-title">Especialização em Tanatologia</h2>
+                    <span class="institution-period">Centro Universitário Vitae, 2019-2020</span>
+                    <p class="degree-description">Especialização voltada para o estudo interdisciplinar da morte, abordando aspectos biológicos, éticos, legais e sociais.</p>
+                </li>
+                
+                <li class="education-item">
+                    <h2 class="degree-title">Mestrado Profissional em Ciências da Saúde</h2>
+                    <span class="institution-period">Universidade Estadual da Vida, 2021-2023</span>
+                    <p class="degree-description">Mestrado voltado para a pesquisa aplicada à melhoria dos processos de investigação de óbitos naturais.</p>
+                </li>
+            </ul>
+        </section>
+        
+        <!-- Seção Produções Bibliográficas -->
+        <section class="publications-section" aria-labelledby="publications-title">
+            <header class="section-header">
+                <h1 id="publications-title" class="section-title">PRODUÇÕES BIBLIOGRÁFICAS</h1>
+            </header>
             
-                <div>
-                        <ul class="listas">
-                         <li><p><span class="negrito">NOME FICTÍCIO.</span><span> Investigação de óbitos por causas mal definidas: desafios e perspectivas no contexto da saúde pública.</span> 2. ed. São Paulo: Editora Evidência Científica, 2022. 312 p.</p></li>
-                        
-                         <li><p><span class="negrito">NOME FICTÍCIO; NOME FICTÍCIO.</span><span> Correlação entre achados laboratoriais e causas naturais de morte em serviços de verificação de óbitos. </span>1. ed. Curitiba: Editora Consciência em Saúde, 2023. 198 p.</p></li>
-                        
-                         <li><p><span class="negrito">NOME FICTÍCIO.</span><span> Tanatologia prática: fundamentos para a atuação no processo de investigação post mortem.</span>3. ed. Porto Alegre: Editora Vitae Médica, 2024. 280 p.</p></li>
-                        </ul>
-                </div>
-            </section>
+            <ul class="publications-list">
+                <li class="publication-item">
+                    <p><span class="author-name">NOME FICTÍCIO.</span>
+                    <span class="publication-title">Investigação de óbitos por causas mal definidas: desafios e perspectivas no contexto da saúde pública.</span>
+                    <span class="publication-details">2. ed. São Paulo: Editora Evidência Científica, 2022. 312 p.</span></p>
+                </li>
+                
+                <li class="publication-item">
+                    <p><span class="author-name">NOME FICTÍCIO; NOME FICTÍCIO.</span>
+                    <span class="publication-title">Correlação entre achados laboratoriais e causas naturais de morte em serviços de verificação de óbitos.</span>
+                    <span class="publication-details">1. ed. Curitiba: Editora Consciência em Saúde, 2023. 198 p.</span></p>
+                </li>
+                
+                <li class="publication-item">
+                    <p><span class="author-name">NOME FICTÍCIO.</span>
+                    <span class="publication-title">Tanatologia prática: fundamentos para a atuação no processo de investigação post mortem.</span>
+                    <span class="publication-details">3. ed. Porto Alegre: Editora Vitae Médica, 2024. 280 p.</span></p>
+                </li>
+            </ul>
+        </section>
     </main>
-    <!--footer-->
+    <!--Footer-->
     <footer id="footer">
         <div class="footerTop">
             <div class="logoContainer">
