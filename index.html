@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVO</title>
-    <link rel="stylesheet" href="css/variables.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVO</title>
+  <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
-    <p>Olá mundo!</p>
-    <div id="app"></div>
-    <script type="module" src="js/main.js"></script>
+  <nav> 
+    <a href="/" onclick="navigateTo('/'); return false;"></a>
+  </nav>
+  <div id="app"></div>
+  <script type="module" src="js/main.js"></script>
+  <script src="js/components/header.js"></script>
+  <script src="js/components/footer.js"></script>
 </body>
+
 </html>
