@@ -1,0 +1,85 @@
+
+#footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 0px 10px 0 rgba(0, 0, 0, 0.5);
+}
+
+.footerTop {
+    background-image: url(../assets/forma_amarela.png) , url(../assets/forma_azul.png);
+    background-position: right bottom, right top;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    height: 93%;
+}
+
+.logoContainer {
+    display: flex;
+    flex-shrink: 0;
+    width: 25vw;
+    background-color: #fbb802;
+    border-radius: 0 50% 0 0 ;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoFooter {
+    height: 130px;
+}
+
+.footerSection {
+    display: flex;
+    flex-direction: column;
+    min-width: 200px;
+    margin-left: 5vw;
+    margin-top: 100px;
+}
+
+.footerSection h3 {
+    font-size: 22px;
+    color: #fbb802;
+    margin-bottom: 15px;
+    border-bottom: solid ;
+    width: fit-content;
+}
+
+.footerSection a {
+    color: #666;
+    margin: 8px 0;
+    font-size: 18px;
+    /* line-height: 1.45; */
+}
+
+.newsSection {
+    flex-grow: 1;
+    /* max-width: 400px; */
+}
+
+.footerCopyright {
+    text-align: center;
+    color: #FFFFFF;
+    background-image: radial-gradient(#3B4498 30%, #161A39 100%, #131632 100% );
+    height: 7%;
+    align-content: center;
+}
+
+.footerCopyright p{
+    margin: 0;
+    font-size: 14px;
+}
+    
+
+/* @media (max-width: 768px) {
+    .footerTop {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .logo-container {
+        margin-bottom: 20px;
+    }
+} */
