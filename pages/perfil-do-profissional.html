@@ -4,40 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVO - Serviço de Verificação de Óbito</title>
-    <link rel="stylesheet" href="#"> <!--Header-->
-    <link rel="stylesheet" href="../css/perfil_profissional.css"> <!--Página-->
-    <link rel="stylesheet" href="../css/style.css"> <!--Footer-->
+    <link rel="stylesheet" href="../css/perfil_profissional.css"> <!-- Estilo da Página-->
+    <link rel="stylesheet" href="../css/footer.css"> <!-- Estilo do Footer-->
+    <link rel="stylesheet" href="../css/header.css"> <!-- Estilo do Header-->
     
 
 </head>
 <body> 
-    
-    <header>
-    </header>
+    <!--Header-->
+    <main-header></main-header>
 
     <!-- Hero -->
     <section class="hero">
             <div class="foto_hero"><img src="../../assets/mulher 2.png" alt="Foto" id="mulher"></div>
-            
             <div class="texto_hero">
                 <h1>Maria Eduarda da Silva Oliveira </h1>
                 <p>Supervisora Geral</p>
             </div>
-
     </section>
     
    
     <main class="career-container">
+
         <!-- Seção Jornada Acadêmica -->
         <section class="journey-section" aria-labelledby="journey-title">
             <header class="section-header">
                 <h1 id="journey-title" class="section-title">JORNADA ACADÊMICA</h1>
             </header>
-            
             <article class="journey-content">
                 <div class="text-block">
                     <p>Minha trajetória na área da saúde começou com o curso técnico em Análises Clínicas, uma formação que me proporcionou o primeiro contato direto com a rotina laboratorial e com o trabalho com materiais biológicos. Esse período foi crucial para entender as etapas iniciais do diagnóstico e a importância de um trabalho preciso no laboratório, uma vez que é fundamental para a saúde pública e para o bem-estar dos pacientes. A experiência adquirida foi a base para o desenvolvimento do meu interesse em áreas mais especializadas dentro da saúde, especialmente no que diz respeito à análise de patologias e doenças infecciosas.</p>
-                    
                     <p>Durante a graduação em Biomedicina, tive a oportunidade de aprofundar meus conhecimentos em diversas disciplinas, como patologia, microbiologia e diagnóstico laboratorial. Participei ativamente de projetos de extensão e pesquisa, os quais se concentraram no estudo de doenças infecciosas e na análise da relação dessas doenças com óbitos por causas mal definidas.</p>
                 </div>
                 
@@ -112,62 +108,21 @@
         </section>
     </main>
 
-    <!--Footer-->
-    <footer id="footer">
-        <div class="footerTop">
-            <div class="logoContainer">
-                <img class="logoFooter" src="../assets/logo svo branco.png" alt="Logo">
-            </div>
+     <main-footer></main-footer>
 
-            <div class="footerSection">
-                <h3>INFORMAÇÕES</h3>
-                <p>Tel: (79) 3234-6022</p>
-                <p>Tel: (79) 99191-5391</p>
-                <p>End: Rua Campo do Brito, 551 - Bairro São José, CEP: 49048-100 Aracaju/SE</p>
-            </div>
-
-            <div class="footerSection">
-                <h3>SERVIÇOS SVO</h3>
-                <a href="#">Solicitação de remoção</a>
-                <a href="#">Consulta de protocolo</a>
-            </div>
-
-            <div class="footerSection newsSection">
-                    <h3>ÚLTIMAS NOTÍCIAS</h3>
-
-                    <div class="newsItem">
-                        <img src="../assets/noticia1.jpg" alt="notícia">
-                        <div>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            <span>01 de janeiro de 2025</span>
-                        </div>
-                    </div>
-
-                <div class="newsItem">
-                    <img src="../assets/noticia2.jpg" alt="notícia">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <span>01 de janeiro de 2025</span>
-                    </div>
-                </div>
-
-                <div class="newsItem">
-                    <img src="../assets/noticia3.jpg" alt="notícia">
-                    <div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                        <span>01 de janeiro de 2025</span>
-                    </div>
-                </div>
-
-            </div>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
+    </div>
 
-        <div class="footerCopyright">
-            <p>© SVO - Serviço de Verificação de Óbito 2025</p>
-        </div>
-
-    </footer>
-
-    <script src="#"></script>
+    <!--Libras-->
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="../js/components/header.js" type="module"></script>
+    <script src="../js/components/footer.js" type="module"></script>
 </body>
 </html>
