@@ -19,9 +19,9 @@ class Header extends HTMLElement {
             </span>
           </button>
           <ul class="menu">
-            <li><a href="">INSTITUCIONAL</a></li>
-            <li><a href="">SOLICITAÇÃO DE REMOÇÃO</a></li>
-            <li><a href="">NOTÍCIAS</a></li>
+            <li><a href="/institucional" data-link>INSTITUCIONAL</a></li>
+            <li><a href="/solicitacao-de-remocao" data-link>SOLICITAÇÃO DE REMOÇÃO</a></li>
+            <li><a href="/noticias" data-link>NOTÍCIAS</a></li>
             <li>
               <div class="toggle-theme" aria-label="Alternar tema"></div>
             </li>
@@ -35,32 +35,32 @@ class Header extends HTMLElement {
   }
 
   initMenu() {
-    const menuToggle = this.querySelector('.menu-toggle');
-    const menu = this.querySelector('.menu');
-    
+    const menuToggle = this.querySelector(".menu-toggle");
+    const menu = this.querySelector(".menu");
+
     if (menuToggle && menu) {
-      menuToggle.addEventListener('click', (e) => {
+      menuToggle.addEventListener("click", (e) => {
         e.stopPropagation();
-        menuToggle.classList.toggle('active');
-        menu.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+        document.body.classList.toggle("menu-open");
       });
 
       // Fechar menu ao clicar em um link
-      this.querySelectorAll('.menu a').forEach(item => {
-        item.addEventListener('click', () => {
-          menuToggle.classList.remove('active');
-          menu.classList.remove('active');
-          document.body.classList.remove('menu-open');
+      this.querySelectorAll(".menu a").forEach((item) => {
+        item.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          menu.classList.remove("active");
+          document.body.classList.remove("menu-open");
         });
       });
 
       // Fechar menu ao clicar fora
-      document.addEventListener('click', (e) => {
+      document.addEventListener("click", (e) => {
         if (!menu.contains(e.target)) {
-          menuToggle.classList.remove('active');
-          menu.classList.remove('active');
-          document.body.classList.remove('menu-open');
+          menuToggle.classList.remove("active");
+          menu.classList.remove("active");
+          document.body.classList.remove("menu-open");
         }
       });
     }
