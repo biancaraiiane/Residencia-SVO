@@ -1,4 +1,7 @@
 import { navigateTo, handleLocation } from "./router.js";
+import './components/header.js';
+import './components/footer.js';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   handleLocation();

@@ -10,7 +10,7 @@ export async function handleLocation() {
   };
 
   const path = window.location.pathname;
-  const route = routes[path] || routes["/"];
+  const route = routes[path] || "/pages/404.html";
   const html = await fetch(route).then((res) => res.text());
   document.getElementById("app").innerHTML = html;
 }
