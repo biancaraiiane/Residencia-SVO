@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solicitação de Remoção - SVO</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/solicitacao.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+
+  <!-- Cabeçalho (componente) -->
+  <main-header></main-header>
+  <!-- Seção do banner -->
+  <section class="hero">
+    <div class="banner">
+      <img src="../assets/Component 1.png" alt="Banner SVO">
+    </div>
+  </section>
+
+  <!-- Seção de opções -->
+  <section class="cards">
+    <div class="card">
+      <img src="../assets/image 2.png" alt="Ícone Consultar Protocolo">
+      <h2>Consultar Protocolo</h2>
+      <p>Com o protocolo, você pode consultar o status da remoção solicitada.</p>
+      <button type="button">Consultar</button>
+    </div>
+
+    <div class="card">
+      <img src="../assets/image 1.png" alt="Ícone Solicitar Remoção">
+      <h2>Solicitar Remoção</h2>
+      <p>Solicite a remoção de forma rápida e segura.</p>
+      <button type="button">Solicitar</button>
+    </div>
+  </section>
+
+  <main-footer></main-footer>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+  <script src="../js/components/header.js" type="module"></script>
+  <script src="../js/components/footer.js" type="module"></script>
+
+</body>
+
+</html>
