@@ -7,6 +7,7 @@ export async function handleLocation() {
   const routes = {
     "/": "/pages/home.html",
     "/solicitacao-de-remocao": "/pages/solicitacao-de-remocao.html",
+    "/noticias": "/pages/noticias.html",
   };
 
   const path = window.location.pathname;
