@@ -206,7 +206,6 @@
     padding-left: 0;
     margin-right: auto;
   }
-
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -214,19 +213,19 @@
     margin-left: 40px;
     font-size: 16px;
   }
-  
+
   .logo {
     padding-left: 40px;
   }
-  
+
   .logo img {
     height: 50px;
   }
-  
+
   .menu {
     padding-right: 40px;
   }
-  
+
   .headerPhone p {
     font-size: 12px;
   }
@@ -263,3 +262,15 @@ body.dark-mode .toggle-theme {
   background-image: url("../assets/sun.png");
 }
 
+.dark-mode .main-header {
+  background-color: #3a3a3a;
+}
+
+.dark-mode .menu a,
+.dark-mode .menu li {
+  color: #ffffff;
+}
+
+.dark-mode .menu a::after {
+  background-color: #ffffff;
+}
