@@ -46,7 +46,8 @@
     margin: 30px;
 }
 .estrutura h2,
-.atividades h2 {
+.atividades h2,
+.profissionais h2 {
   color: #f6b700;
   display: flex;          
   align-items: center;    
@@ -76,6 +77,16 @@
   border-radius: 2px;    
 }
 
+.profissionais h2::after {
+  content: "";
+  flex-grow: 1; 
+  height: 4px;
+  background-color: #f6b700;
+  min-width: 50px; 
+  max-width: 100%;
+  border-radius: 2px;    
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -84,7 +95,9 @@
 }
 
 .card {
-  flex: 1 1 calc(33.333% - 20px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #eaeaea;
   text-align: center;
   padding: 10px;
@@ -98,7 +111,103 @@
   border-radius: 4px;
 }
 
+.card .info{
+  text-align: left;
+  gap: .625rem;
+}
+
+.card .info a{
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #f6b700;
+}
+
+
 .atividades {
   margin-top: 50px;
   line-height: 1.6;
+}
+
+/*proffisionais*/
+
+.professional-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.professional-card {
+  display: flex;
+  width: 530px;
+  height: 175px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+  width: 209px;
+  height: 80%;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.professional-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.professional-card .cargo {
+  color: #FBB802;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.professional-card .nome {
+  font-weight: 600;
+  margin-bottom: .3125rem;
+}
+
+.professional-card .email,
+.professional-card .telefone {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: .3125rem;
+}
+
+.professional-card .email img,
+.professional-card .telefone img {
+  width: 16px;
+  height: 16px;
+  margin-right: .3125rem;
+}
+
+.icon {
+  filter: invert(0);
+}
+
+@media (max-width: 555px) {
+  .professional-card .email, .telefone {
+    font-size: 10px;
+  }
+}
+
+body.dark-mode .professional-card{
+  background-color: #2a2a2a;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .icon{
+  filter: invert(1);
 }
