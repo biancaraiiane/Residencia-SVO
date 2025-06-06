@@ -166,6 +166,22 @@
         font-style: normal;
     }
 
+    /*Dark-mode*/
+
+    .dark-mode .education-item {
+        background-color: #666;
+    }
+
+
+    .dark-mode .education-item h2 {
+        color: #FBB802;
+    }
+
+    .dark-mode .institution-period, .dark-mode .degree-description {
+        color: #ffffff;
+    }
+
+
     /* Responsividade */
     @media (min-width: 1440px) {
         .hero {
