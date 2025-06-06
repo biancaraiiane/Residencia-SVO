@@ -1,0 +1,139 @@
+.noticia-container {
+  max-width: 900px;
+  margin: 120px auto 80px;
+  padding: 0 20px;
+  font-family: Arial, sans-serif;
+}
+
+.noticia-detalhe .titulo {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.noticia-detalhe .meta {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.noticia-detalhe p {
+  font-size: 18px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.imagem-principal {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.imagem-texto {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.imagem-texto img {
+  width: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.imagem-texto.reverso {
+  flex-direction: row-reverse;
+}
+
+.destaque {
+  background-color: #ffe08a;
+  padding: 15px 20px;
+  border-left: 6px solid #ffb400;
+  font-style: italic;
+  margin-bottom: 30px;
+  border-radius: 6px;
+}
+
+.botao-voltar {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.botao-voltar .btn {
+  background-color: #ffb400;
+  color: #000;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.botao-voltar .btn:hover {
+  background-color: #e5a300;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .noticia-detalhe .titulo {
+    font-size: 24px;
+  }
+
+  .noticia-detalhe p {
+    font-size: 16px;
+  }
+
+  .imagem-texto {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagem-texto img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .noticia-detalhe .titulo {
+    font-size: 20px;
+  }
+
+  .noticia-detalhe p {
+    font-size: 14px;
+  }
+}
+
+/* Dark Mode */
+body.dark-mode .noticia-detalhe p,
+body.dark-mode .noticia-detalhe .meta {
+  color: #ccc;
+}
+
+body.dark-mode .destaque {
+  background-color: #444;
+  color: #fff5c2;
+  border-left-color: #e5a300;
+}
+
+body.dark-mode .btn {
+  background-color: #ffc400;
+  color: #000;
+}
+/* Fundo escuro no modo dark */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+.autor-destaque {
+  color:#ffb400; 
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+body.dark-mode .autor-destaque {
+  color: #ffb400; 
+}

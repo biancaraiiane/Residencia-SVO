@@ -8,6 +8,9 @@ export async function handleLocation() {
     "/": "/pages/home.html",
     "/solicitacao-de-remocao": "/pages/solicitacao-de-remocao.html",
     "/noticias": "/pages/noticias.html",
+    "/institucional": "/pages/institucional.html",
+    "/perfil-do-profissional": "/pages/perfil-do-profissional.html",
+    "/noticia-unica-1": "/pages/noticia-unica-1.html",
   };
 
   const path = window.location.pathname;

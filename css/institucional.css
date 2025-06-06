@@ -1,0 +1,213 @@
+.box {
+  background-color: #3b4498;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* SVG de fundo (contorno cinza) */
+.svg-back {
+  position: absolute;
+  top: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  z-index: 1;
+  opacity: 0.5;
+  
+}
+
+/* SVG amarelo (com texto) */
+.banner-svg {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+}
+
+/* responsividade */
+
+@media (max-width: 475px) {
+  .svg-back {
+    width: 80%;
+  }
+}
+
+/* sessão */
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.estrutura h2,
+.atividades h2,
+.profissionais h2 {
+  color: #f6b700;
+  display: flex;          
+  align-items: center;    
+  gap: 1rem;              
+  flex-wrap: nowrap; 
+  max-width: 100%;  
+  margin-bottom: 20px;
+}
+
+.atividades h2::after {
+  content: "";
+  flex-grow: 1; 
+  height: 4px;
+  background-color: #f6b700;
+  min-width: 50px; 
+  max-width: 100%; 
+  border-radius: 2px;    
+}
+
+.estrutura h2::after {
+  content: "";
+  flex-grow: 1; 
+  height: 4px;
+  background-color: #f6b700;
+  min-width: 50px; 
+  max-width: 100%;
+  border-radius: 2px;    
+}
+
+.profissionais h2::after {
+  content: "";
+  flex-grow: 1; 
+  height: 4px;
+  background-color: #f6b700;
+  min-width: 50px; 
+  max-width: 100%;
+  border-radius: 2px;    
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.card img {
+  width: 100px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card .info{
+  text-align: left;
+  gap: .625rem;
+}
+
+.card .info a{
+  margin-left: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #f6b700;
+}
+
+
+.atividades {
+  margin-top: 50px;
+  line-height: 1.6;
+}
+
+/*proffisionais*/
+
+.professional-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.professional-card {
+  display: flex;
+  width: 530px;
+  height: 175px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.foto-perfil {
+  width: 209px;
+  height: 80%;
+  object-fit: cover;
+  margin: 1rem;
+  border-radius: 4px;
+}
+
+.professional-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
+.professional-card .cargo {
+  color: #FBB802;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.professional-card .nome {
+  font-weight: 600;
+  margin-bottom: .3125rem;
+}
+
+.professional-card .email,
+.professional-card .telefone {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  margin-bottom: .3125rem;
+}
+
+.professional-card .email img,
+.professional-card .telefone img {
+  width: 16px;
+  height: 16px;
+  margin-right: .3125rem;
+}
+
+.icon {
+  filter: invert(0);
+}
+
+@media (max-width: 555px) {
+  .professional-card .email, .telefone {
+    font-size: 10px;
+  }
+}
+
+body.dark-mode .professional-card{
+  background-color: #2a2a2a;
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .icon{
+  filter: invert(1);
+}
