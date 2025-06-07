@@ -19,9 +19,9 @@ class Header extends HTMLElement {
             </span>
           </button>
           <ul class="menu">
-            <li><a href="/institucional" data-link>INSTITUCIONAL</a></li>
-            <li><a href="/solicitacao-de-remocao" data-link>SOLICITAÇÃO DE REMOÇÃO</a></li>
-            <li><a href="/noticias" data-link>NOTÍCIAS</a></li>
+            <li><a href="#/institucional" data-link>INSTITUCIONAL</a></li>
+            <li><a href="#/solicitacao-de-remocao" data-link>SOLICITAÇÃO DE REMOÇÃO</a></li>
+            <li><a href="#/noticias" data-link>NOTÍCIAS</a></li>
             <li>
               <div class="toggle-theme" aria-label="Alternar tema"></div>
             </li>

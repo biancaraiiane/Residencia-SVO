@@ -43,7 +43,7 @@ document.querySelector('.btn-consultar').addEventListener('click', function () {
 
     if (!valido) return;
 
-    alert(`Consultando protocolo ${protocolo.value.trim()} para ${nome.value.trim()}`);
+    window.navigateTo('#/retorno-protocolo');
 });
 
 function mostrarErro(input, mensagem) {
