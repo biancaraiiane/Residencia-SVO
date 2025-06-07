@@ -2,6 +2,7 @@ export function navigateTo(page) {
   window.history.pushState({}, "", page);
   handleLocation();
 }
+window.navigateTo = navigateTo;
 
 export async function handleLocation() {
   const routes = {
@@ -10,6 +11,8 @@ export async function handleLocation() {
     "/noticias": "/pages/noticias.html",
     "/institucional": "/pages/institucional.html",
     "/perfil-do-profissional": "/pages/perfil-do-profissional.html",
+    "/noticia-unica-1": "/pages/noticia-unica-1.html",
+    "/consultaProtocolo": "/pages/consultaProtocolo.html",
   };
 
   const path = window.location.pathname;
