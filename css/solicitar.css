@@ -126,3 +126,48 @@ button:hover {
   color: #e7dfdf;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
+
+/*proximo passo*/
+
+#pergunta-plano{
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  max-width: 400px;
+  width: 100%;
+}
+
+.botoes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dark-mode #pergunta-plano{
+  background-color: #2a2a2a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.dark-mode #btn-sim{
+  color: #e7dfdf;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.dark-mode #btn-nao{
+  color: #e7dfdf;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+
+#resposta-sim{
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ccc;
+  max-width: 400px;
+  width: 100%;
+}
+
+.dark-mode #resposta-sim{
+  background-color: #2a2a2a;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}

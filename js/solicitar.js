@@ -90,8 +90,10 @@ document
 
     if (!valido) return;
 
-    alert("Formulário válido! Pronto para enviar.");
-    document.getElementById("form").reset();
+    // Esconde o formulário e o botão, mostra a pergunta do plano
+    document.getElementById("form").style.display = "none";
+    document.getElementById("btn-prosseguir").style.display = "none";
+    document.getElementById("pergunta-plano").style.display = "block";
   });
 
 document.getElementById("telefone").addEventListener("input", function (e) {
@@ -182,3 +184,13 @@ function validarCPF(cpf) {
   let dig2 = resto >= 10 ? 0 : resto;
   return dig2 === parseInt(cpf.charAt(10));
 }
+
+document.getElementById("btn-sim").addEventListener("click", function () {
+  document.getElementById("pergunta-plano").style.display = "none";
+  document.getElementById("resposta-sim").style.display = "block";
+});
+
+document.getElementById("btn-nao").addEventListener("click", function () {
+  // Redireciona para a rota desejada (exemplo: #/proxima-pagina)
+  window.navigateTo("#/proxima-pagina");
+});

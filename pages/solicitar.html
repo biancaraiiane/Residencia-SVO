@@ -55,7 +55,22 @@
                 <small class="error"></small>
             </label>
         </form>
+
         <button type="submit" id="btn-prosseguir">Prosseguir</button>
+        <div id="pergunta-plano" style="display: none;" class="pergunta-box">
+            <p><strong>O falecido possuía plano funerário ativo no momento do óbito?</strong></p>
+            <div class="botoes">
+                <button type="button" id="btn-sim">SIM</button>
+                <button type="button" id="btn-nao">NÃO</button>
+            </div>
+        </div>
+        <div id="resposta-sim" style="display: none;" class="resposta-box">
+            <p><strong>O atendimento deve ser realizado pelo plano funerário ao qual o falecido era vinculado.</strong>
+            </p>
+            <label>
+                Solicite contato com o Plano Funerário responsável
+            </label>
+        </div>
     </div>
     <main-footer></main-footer>
     <script src="../js/components/header.js" type="module"></script>
