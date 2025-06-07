@@ -13,6 +13,7 @@ export async function handleLocation() {
     "/perfil-do-profissional": "/pages/perfil-do-profissional.html",
     "/noticia-unica-1": "/pages/noticia-unica-1.html",
     "/consultaProtocolo": "/pages/consultaProtocolo.html",
+    "/retorno-protocolo": "/pages/retorno-protocolo.html",
   };
 
   const path = window.location.pathname;
