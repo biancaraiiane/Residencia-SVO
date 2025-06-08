@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FSPH SVO</title>
+  <link rel="stylesheet" href="/css/noticias.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/solicitacao.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/triagem.css">
+</head>
+
+<body>
+  <!-- Modal de Observações -->
+  <div id="modal-observacoes" class="modal-overlay">
+    <div class="modal-content" id="modal-content">
+      <button id="fechar-modal" class="modal-close">×</button>
+      <h2>OBSERVAÇÕES</h2>
+      <div class="obs-box">
+        <div class="obs-item">Óbitos ocorridos em unidades de pronto atendimento ou de emergência: Os médicos
+          dessas unidades devem esgotar as possibilidades para formular a hipótese diagnóstica e emitir
+          Declaração de Óbito.</div>
+        <div class="obs-item">O SVO poderá ser acionado a esclarecer a causa do óbito quando este ocorrer sem
+          que tenha sido estabelecido o diagnóstico.</div>
+        <div class="obs-item">O corpo só deverá ser encaminhado ao SVO com o “Termo de Consentimento para
+          Necropsia” assinado pela família e com a Guia de Encaminhamento emitida pela unidade que prestou o
+          atendimento.</div>
+        <div class="obs-item">Em caso de recusa da família de assinatura do termo de Consentimento, o médico
+          deverá emitir a declaração de óbito com os dados que dispuser e entregá-la ao familiar.</div>
+      </div>
+    </div>
+  </div>
+  <main-header></main-header>
+
+
+  <main class="main-content">
+    <div class="form-container">
+      <h1 class="form-title">TRIAGEM DE SOLICITAÇÃO</h1>
+
+      <form id="triageForm">
+        <div class="question">
+          <p>O falecimento ocorreu na residencia da vitima? </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q1" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q1" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>Você possui algum grau de parentesco com a vitima? </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q2" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q2" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+          <div class="conditional-options q2-options" id="q2-conditional">
+            <p class="sub-question">Selecione o tipo de grau:</p>
+            <div class="checkbox-options">
+              <label class="checkbox-option">
+                <input type="checkbox" name="q2_option" value="parametro_incorreto">
+                <span>Primeiro grau</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q2_option" value="dados_ausentes">
+                <span>segundo grau</span>
+              </label>
+              <label class="checkbox-option">
+                <input type="checkbox" name="q2_option" value="formato_invalido">
+                <span>desconhecido</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>A pessoa falecida possuia alguma comorbidade ou condição médica pré-existente? </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q3" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+          <div class="conditional-options q3-options" id="q3-conditional">
+            <p class="sub-question">Selecione as capacidades:</p>
+            <div class="text-options">
+              <label for="q3_text" class="text-label">
+                <span>Descreva a comorbidade ou condição médica:</span>
+                <textarea id="q3_text" name="q3_text" rows="3" placeholder="Digite aqui..."
+                  style="width:100%;padding:8px;border-radius:4px;border:1px solid #ccc;"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>O óbito ocorreu por causa natural, sem suspeita de violencia ou fatores externos? </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q4" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q4" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>o corpo foi mantido intacto, sem sinal de manipulação, interferencia externa ou
+            procedimento de reanimação?</p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q5" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q5" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>O falecimento foi presenciado por alguem? </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q6" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q6" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+          <div class="conditional-options q6-options" id="q6-conditional">
+            <p class="sub-question">Digite os pontos analisados:</p>
+            <div class="text-options">
+              <label for="q6_text" class="text-label">
+                <textarea id="q6_text" name="q6_text" rows="3" placeholder="Digite aqui..."
+                  style="width:100%;padding:8px;border-radius:4px;border:1px solid #ccc;"></textarea>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="question">
+          <p>Há presença de arama de fogo, sinais de violência ou qualquer indicio de crime no local?
+          </p>
+          <div class="options">
+            <label class="option">
+              <input type="radio" name="q7" value="sim" required>
+              <span class="radio-button">SIM</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q7" value="nao">
+              <span class="radio-button">NÃO</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button type="submit" id="continueButton">PROSSEGUIR</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+
+  <main-footer></main-footer>
+  <script src="../js/components/header.js" type="module"></script>
+  <script src="../js/components/footer.js" type="module"></script>
+</body>
+
+</html>

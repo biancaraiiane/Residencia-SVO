@@ -1,0 +1,53 @@
+.header-banner {
+  background-color: #3b4498;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.consultar-header{
+    background-color: #fbb802;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 70vh;
+    height: 30px;
+    border-radius: 20px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 1.25rem;
+}
+
+.pdf-container iframe{
+    max-width: 500px;
+    min-height: 600px;
+}
+
+.btn-imprimir{
+    background: #fbb802;
+    border: none;
+    width: 30%;
+    height: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.dark-mode .btn-imprimir{
+   color: white;
+   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+   
+}
