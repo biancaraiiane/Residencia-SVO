@@ -2,48 +2,48 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="whidth=device-whidth, initial-scale=1.0">
-    <title>Consulta de Protocolo </title>
-    <link rel="stylesheet" href="/css/consulta-protocolo.css">
-    <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/solicitacao.css">
-    <link rel="stylesheet" href="../css/footer.css">
-    <link rel="stylesheet" href="../css/global.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="whidth=device-whidth, initial-scale=1.0">
+  <title>Consulta de Protocolo </title>
+  <link rel="stylesheet" href="/css/consulta-protocolo.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/solicitacao.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/global.css">
 </head>
 
 <body>
-    <main-header></main-header>
+  <main-header></main-header>
 
-    <div class="header-banner">
-        <button class="consultar-btn-header">CONSULTAR PROTOCOLO</button>
+  <div class="header-banner">
+    <button class="consultar-btn-header">CONSULTAR PROTOCOLO</button>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <div class="input-group">
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Digite seu nome completo">
+      </div>
+
+      <div class="input-group">
+        <label for="cpf">CPF</label>
+        <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
+      </div>
+
+      <div class="input-group">
+        <label for="protocolo">N° de Protocolo</label>
+        <input type="text" id="protocolo" placeholder="Digite o número do protocolo">
+      </div>
+
+      <button class="btn-consultar">CONSULTAR</button>
     </div>
-
-    <div class="container">
-        <div class="form-container">
-            <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" placeholder="Digite seu nome completo">
-            </div>
-
-            <div class="input-group">
-                <label for="cpf">CPF</label>
-                <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14">
-            </div>
-
-            <div class="input-group">
-                <label for="protocolo">N° de Protocolo</label>
-                <input type="text" id="protocolo" placeholder="Digite o número do protocolo">
-            </div>
-
-            <button class="btn-consultar">CONSULTAR</button>
-        </div>
-    </div>
-    <main-footer></main-footer>
+  </div>
+  <main-footer></main-footer>
 
 
-    <script src="../js/components/header.js" type="module"></script>
-    <script src="../js/components/footer.js" type="module"></script>
+  <script src="../js/components/header.js" type="module"></script>
+  <script src="../js/components/footer.js" type="module"></script>
 </body>
 
 </html>

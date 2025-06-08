@@ -90,6 +90,8 @@ document
 
     if (!valido) return;
 
+    localStorage.setItem("nomeSolicitante", nome.value.trim());
+
     // Esconde o formulário e o botão, mostra a pergunta do plano
     document.getElementById("form").style.display = "none";
     document.getElementById("btn-prosseguir").style.display = "none";
@@ -191,6 +193,5 @@ document.getElementById("btn-sim").addEventListener("click", function () {
 });
 
 document.getElementById("btn-nao").addEventListener("click", function () {
-  // Redireciona para a rota desejada (exemplo: #/proxima-pagina)
-  window.navigateTo("#/proxima-pagina");
+  window.navigateTo("#/sistema-de-triagem");
 });
