@@ -15,6 +15,7 @@ export async function handleLocation() {
     "#/consultaProtocolo": "/pages/consultaProtocolo.html",
     "#/retorno-protocolo": "/pages/retorno-protocolo.html",
     "#/solicitar": "/pages/solicitar.html",
+    "#/sistema-de-triagem": "/pages/sistema-de-triagem.html",
   };
 
   const path = window.location.hash || "";
@@ -31,6 +32,13 @@ export async function handleLocation() {
   if (path === "#/solicitar") {
     const script = document.createElement("script");
     script.src = "js/solicitar.js";
+    document.body.appendChild(script);
+  }
+
+  if (path === "#/sistema-de-triagem") {
+    document.querySelectorAll('script[src="js/sistema-de-triagem.js"]').forEach(s => s.remove());
+    const script = document.createElement("script");
+    script.src = "js/sistema-de-triagem.js";
     document.body.appendChild(script);
   }
 }
