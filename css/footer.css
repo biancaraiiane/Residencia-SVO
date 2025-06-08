@@ -36,8 +36,9 @@
 .footerSection {
   display: flex;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 160px;
   margin-top: 100px;
+  margin-left: 50px;
 }
 
 .footerSection h3 {
@@ -52,6 +53,7 @@
   color: #666;
   margin: 8px 0;
   font-size: 18px;
+  max-width: 300px;
 }
 
 .newsSection {
@@ -98,7 +100,6 @@
     order: 2;
     margin: 20px 0;
     text-align: center;
-    width: 100%;
   }
 
   .footerSection:not(:nth-child(2)) {
