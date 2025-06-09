@@ -14,7 +14,6 @@
     right top;
   background-repeat: no-repeat;
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
   height: 93%;
 }
@@ -81,7 +80,6 @@
   .footerTop {
     flex-direction: column;
     background-image: none;
-    padding: 20px;
     height: auto;
     align-items: center;
     gap: 20px;
@@ -128,7 +126,6 @@
   .footerTop {
     flex-direction: column;
     background-image: none;
-    padding: 20px;
     height: auto;
     align-items: center;
     gap: 20px;
@@ -147,7 +144,7 @@
     order: 2;
     margin: 20px 0;
     text-align: center;
-    width: 100%;
+    width: auto;
   }
   
   .footerSection:not(:nth-child(2)) {
