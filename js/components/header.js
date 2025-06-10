@@ -8,9 +8,9 @@ class Header extends HTMLElement {
           <p>Rua Campo do Brito, 551 - Bairro São José, CEP: 49048-100 Aracaju/SE</p>
         </div>
         <div class="header-container">
-          <div class="logo">
+          <a href="#" data-link class="logo">
             <img src="../assets/logo svo branco.png" alt="Logo FSPH">
-          </div>
+          </a>
           <button class="menu-toggle" aria-label="Menu">
             <span class="menu-icon">
               <span class="bar"></span>
