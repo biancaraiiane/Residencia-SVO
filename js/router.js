@@ -1,5 +1,7 @@
 function reinicializaVLibras() {
-  document.querySelectorAll('.vw-plugin-wrapper, .vw-access-button').forEach(el => el.remove());
+  document
+    .querySelectorAll(".vw-plugin-wrapper, .vw-access-button")
+    .forEach((el) => el.remove());
   setTimeout(() => {
     if (window.VLibras && window.VLibras.Widget) {
       new window.VLibras.Widget("https://vlibras.gov.br/app");
@@ -14,23 +16,39 @@ export function navigateTo(page) {
 }
 window.navigateTo = navigateTo;
 
+const routes = {
+  "": { page: "pages/home.html", css: ["css/home.css"] },
+  "solicitacao-de-remocao": { page: "pages/solicitacao-de-remocao.html", css: ["css/solicitacao.css"] },
+  "noticias": { page: "pages/noticias.html", css: ["css/noticias.css"] },
+  "institucional": { page: "pages/institucional.html", css: ["css/institucional.css"] },
+  "perfil-do-profissional": { page: "pages/perfil-do-profissional.html", css: ["css/perfil_profissional.css"] },
+  "noticia-unica-1": { page: "pages/noticia-unica-1.html", css: ["css/noticia-unica.css"] },
+  "consultaProtocolo": { page: "pages/consultaProtocolo.html", css: ["css/consulta-protocolo.css"] },
+  "retorno-protocolo": { page: "pages/retorno-protocolo.html", css: ["css/retorno-protocolo.css"] },
+  "solicitar": { page: "pages/solicitar.html", css: ["css/solicitar.css"] },
+  "sistema-de-triagem": { page: "pages/sistema-de-triagem.html", css: ["css/triagem.css"] },
+};
 
-  const routes = {
-  "": "pages/home.html",
-  "solicitacao-de-remocao": "pages/solicitacao-de-remocao.html",
-  "noticias": "pages/noticias.html",
-  "institucional": "pages/institucional.html",
-  "perfil-do-profissional": "pages/perfil-do-profissional.html",
-  "noticia-unica-1": "pages/noticia-unica-1.html",
-  "consultaProtocolo": "pages/consultaProtocolo.html",
-  "retorno-protocolo": "pages/retorno-protocolo.html",
-  "solicitar": "pages/solicitar.html",
-  "sistema-de-triagem": "pages/sistema-de-triagem.html",
-  };
+function setPageCSS(cssList) {
+  // Remove CSS antigos de página
+  document.querySelectorAll('link[data-router-css]').forEach(link => link.remove());
+  // Adiciona novos CSS
+  if (cssList && cssList.length) {
+    cssList.forEach(cssPath => {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = cssPath;
+      link.setAttribute('data-router-css', 'true');
+      document.head.appendChild(link);
+    });
+  }
+}
+
 export async function handleLocation() {
   const hash = window.location.hash.replace(/^#\//, "");
-  const route = routes[hash] || routes[""];
-  const html = await fetch(route).then((res) => res.text());
+  const routeObj = routes[hash] || routes[""];
+  setPageCSS(routeObj.css);
+  const html = await fetch(routeObj.page).then((res) => res.text());
   document.getElementById("app").innerHTML = html;
 
   if (hash === "consultaProtocolo") {
@@ -46,13 +64,15 @@ export async function handleLocation() {
   }
 
   if (hash === "sistema-de-triagem") {
-    document.querySelectorAll('script[src="js/sistema-de-triagem.js"]').forEach(s => s.remove());
+    document
+      .querySelectorAll('script[src="js/sistema-de-triagem.js"]')
+      .forEach((s) => s.remove());
     const script = document.createElement("script");
     script.src = "js/sistema-de-triagem.js";
     document.body.appendChild(script);
   }
 
-   reinicializaVLibras();
+  reinicializaVLibras();
 }
 
 window.addEventListener("hashchange", handleLocation);
