@@ -19,8 +19,8 @@ class Footer extends HTMLElement {
 
                     <div class="footerSection">
                         <h3>SERVIÇOS SVO</h3>
-                        <a>Solicitação de remoção</a>
-                        <a>Consulta de protocolo</a>
+                        <a href="#/solicitar" data-link>Solicitação de remoção</a>
+                        <a href="#/consultaProtocolo" data-link>Consulta de protocolo</a>
                     </div>
                     
                     <div class="footerSection">

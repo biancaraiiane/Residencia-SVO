@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <title>FSPH SVO</title>
   <link rel="stylesheet" href="/css/noticias.css">
-   <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/header.css">
   <link rel="stylesheet" href="../css/solicitacao.css">
   <link rel="stylesheet" href="../css/footer.css">
   <link rel="stylesheet" href="../css/global.css">
@@ -14,81 +14,100 @@
 <body>
   <main-header></main-header>
   <!-- Seção de Notícias em Destaque -->
-   <div class="box">
-  <section id="noticias" class="noticias">
-    <div class="noticia destaque" style="background-image: url('/assets/noticia1.png');">
-      <div class="overlay">
+  <div class="box">
+    <section id="noticias" class="noticias">
+      <div class="noticia destaque" style="background-image: url('/assets/noticia1.png');">
         <a href="#/noticia-unica-1" data-link class="noticia-link">
-          <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
+          <div class="overlay">
+            <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
+          </div>
         </a>
       </div>
-    </div>
 
-    <div class="noticias-laterais">
-      <div class="noticia pequena" style="background-image: url('/assets/noticia2.png');">
-        <div class="overlay">
-          <a href="#/noticia-unica-1" data-link class="noticia-link">
-            <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
-          </a>
+
+      <div class="noticias-laterais">
+        <a href="#/noticia-unica-1" data-link class="noticia-link">
+          <div class="noticia pequena" style="background-image: url('/assets/noticia2.png');">
+            <div class="overlay">
+              <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
+            </div>
+          </div>
+        </a>
+        <a href="#/noticia-unica-1" data-link class="noticia-link">
+          <div class="noticia pequena" style="background-image: url('/assets/noticia3.png');">
+            <div class="overlay">
+              <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Lista de Notícias -->
+    <section class="lista-noticias">
+      <article class="noticia-item">
+        <div class="thumb"><img src="/assets/noticia1.png" alt=""></div>
+        <div class="conteudo">
+          <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA
+              NOTÍCIA</a></h3>
+          <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
         </div>
-      </div>
-      <div class="noticia pequena" style="background-image: url('/assets/noticia3.png');">
-        <div class="overlay">
-          <a href="#/noticia-unica-1" data-link class="noticia-link">
-            <h3>TÍTULO DE TEXTO DA NOTÍCIA</h3>
-          </a>
+      </article>
+
+      <article class="noticia-item">
+        <div class="thumb"><img src="/assets/noticia2.png" alt=""></div>
+        <div class="conteudo">
+          <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA
+              NOTÍCIA</a></h3>
+          <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
         </div>
-      </div>
-    </div>
-  </section>
+      </article>
 
-  <!-- Lista de Notícias -->
-  <section class="lista-noticias">
-    <article class="noticia-item">
-      <div class="thumb"><img src="/assets/noticia1.png" alt=""></div>
-      <div class="conteudo">
-        <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA NOTÍCIA</a></h3>
-        <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
-      </div>
-    </article>
+      <article class="noticia-item">
+        <div class="thumb"><img src="/assets/noticia3.png" alt=""></div>
+        <div class="conteudo">
+          <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA
+              NOTÍCIA</a></h3>
+          <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
+        </div>
+      </article>
 
-    <article class="noticia-item">
-      <div class="thumb"><img src="/assets/noticia2.png" alt=""></div>
-      <div class="conteudo">
-        <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA NOTÍCIA</a></h3>
-        <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
-      </div>
-    </article>
+      <article class="noticia-item">
+        <div class="thumb"><img src="/assets/noticia4.png" alt=""></div>
+        <div class="conteudo">
+          <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA
+              NOTÍCIA</a></h3>
+          <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
+        </div>
+      </article>
 
-    <article class="noticia-item">
-      <div class="thumb"><img src="/assets/noticia3.png" alt=""></div>
-      <div class="conteudo">
-        <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA NOTÍCIA</a></h3>
-        <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
-      </div>
-    </article>
+      <article class="noticia-item">
+        <div class="thumb"><img src="/assets/noticia5.png" alt=""></div>
+        <div class="conteudo">
+          <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA
+              NOTÍCIA</a></h3>
+          <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
+        </div>
+      </article>
 
-    <article class="noticia-item">
-      <div class="thumb"><img src="/assets/noticia4.png" alt=""></div>
-      <div class="conteudo">
-        <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA NOTÍCIA</a></h3>
-        <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
+      <div class="container-button">
+        <a href="#/noticias" class="more-news-btn">MAIS NOTÍCIAS</a>
       </div>
-    </article>
 
-    <article class="noticia-item">
-      <div class="thumb"><img src="/assets/noticia5.png" alt=""></div>
-      <div class="conteudo">
-        <h3><a href="#/noticia-unica-1" data-link class="noticia-link color-black" target="_blank">TÍTULO DE TEXTO DA NOTÍCIA</a></h3>
-        <p>Seu texto resumido da notícia aqui. Lorem ipsum dolor sit amet...</p>
-      </div>
-    </article>
-
-    <div class="container-button"><a class="carregar-noticias">CARREGAR MAIS NOTÍCIAS</a></div>
-    
-  </section>
+    </section>
   </div>
   <main-footer></main-footer>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
   <script src="../js/components/header.js" type="module"></script>
   <script src="../js/components/footer.js" type="module"></script>
 </body>

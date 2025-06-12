@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecionando...</title>
+    <script>
+      // Redireciona para index.html, mantendo query e hash
+      var l = window.location;
+      var path = l.pathname.replace(/\/[^\/]+$/, "/");
+      window.location.replace(path + "index.html" + l.search + l.hash);
+    </script>
+  </head>
+  <body>
+    <p>Redirecionando...</p>
+  </body>
+</html>

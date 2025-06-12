@@ -14,7 +14,6 @@
     right top;
   background-repeat: no-repeat;
   display: flex;
-  flex-wrap: wrap;
   gap: 40px;
   height: 93%;
 }
@@ -36,8 +35,9 @@
 .footerSection {
   display: flex;
   flex-direction: column;
-  min-width: 200px;
+  min-width: 160px;
   margin-top: 100px;
+  margin-left: 50px;
 }
 
 .footerSection h3 {
@@ -52,6 +52,7 @@
   color: #666;
   margin: 8px 0;
   font-size: 18px;
+  max-width: 300px;
 }
 
 .newsSection {
@@ -79,7 +80,6 @@
   .footerTop {
     flex-direction: column;
     background-image: none;
-    padding: 20px;
     height: auto;
     align-items: center;
     gap: 20px;
@@ -98,7 +98,6 @@
     order: 2;
     margin: 20px 0;
     text-align: center;
-    width: 100%;
   }
 
   .footerSection:not(:nth-child(2)) {
@@ -127,7 +126,6 @@
   .footerTop {
     flex-direction: column;
     background-image: none;
-    padding: 20px;
     height: auto;
     align-items: center;
     gap: 20px;
@@ -146,7 +144,7 @@
     order: 2;
     margin: 20px 0;
     text-align: center;
-    width: 100%;
+    width: auto;
   }
   
   .footerSection:not(:nth-child(2)) {
