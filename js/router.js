@@ -9,6 +9,23 @@ function reinicializaVLibras() {
   }, 100);
 }
 
+function loadVLibras() {
+  // Remove instâncias antigas do VLibras
+  document.querySelectorAll('script[src*="vlibras-plugin.js"]').forEach(s => s.remove());
+  document.querySelectorAll('.vw-plugin-wrapper, .vw-access-button').forEach(el => el.remove());
+  // Adiciona o script VLibras novamente
+  const script = document.createElement('script');
+  script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+  script.onload = () => {
+    setTimeout(() => {
+      if (window.VLibras && window.VLibras.Widget) {
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      }
+    }, 100);
+  };
+  document.body.appendChild(script);
+}
+
 export function navigateTo(page) {
   window.history.pushState({}, "", page);
   handleLocation();
@@ -72,7 +89,7 @@ export async function handleLocation() {
     document.body.appendChild(script);
   }
 
-  reinicializaVLibras();
+  loadVLibras();
 }
 
 window.addEventListener("hashchange", handleLocation);
