@@ -16,16 +16,16 @@ window.navigateTo = navigateTo;
 
 
   const routes = {
-    "": "/pages/home.html",
-    "solicitacao-de-remocao": "/pages/solicitacao-de-remocao.html",
-    "noticias": "/pages/noticias.html",
-    "institucional": "/pages/institucional.html",
-    "perfil-do-profissional": "/pages/perfil-do-profissional.html",
-    "noticia-unica-1": "/pages/noticia-unica-1.html",
-    "consultaProtocolo": "/pages/consultaProtocolo.html",
-    "retorno-protocolo": "/pages/retorno-protocolo.html",
-    "solicitar": "/pages/solicitar.html",
-    "sistema-de-triagem": "/pages/sistema-de-triagem.html",
+  "": "pages/home.html",
+  "solicitacao-de-remocao": "pages/solicitacao-de-remocao.html",
+  "noticias": "pages/noticias.html",
+  "institucional": "pages/institucional.html",
+  "perfil-do-profissional": "pages/perfil-do-profissional.html",
+  "noticia-unica-1": "pages/noticia-unica-1.html",
+  "consultaProtocolo": "pages/consultaProtocolo.html",
+  "retorno-protocolo": "pages/retorno-protocolo.html",
+  "solicitar": "pages/solicitar.html",
+  "sistema-de-triagem": "pages/sistema-de-triagem.html",
   };
 export async function handleLocation() {
   const hash = window.location.hash.replace(/^#\//, "");
