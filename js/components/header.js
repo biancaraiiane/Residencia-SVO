@@ -9,7 +9,7 @@ class Header extends HTMLElement {
         </div>
         <div class="header-container">
           <a href="#" data-link class="logo">
-            <img src="../assets/logo svo branco.png" alt="Logo FSPH">
+            <img src="assets/logo svo branco.png" alt="Logo FSPH">
           </a>
           <button class="menu-toggle" aria-label="Menu">
             <span class="menu-icon">

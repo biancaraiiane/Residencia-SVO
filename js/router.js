@@ -11,15 +11,19 @@ function reinicializaVLibras() {
 
 function loadVLibras() {
   // Remove instâncias antigas do VLibras
-  document.querySelectorAll('script[src*="vlibras-plugin.js"]').forEach(s => s.remove());
-  document.querySelectorAll('.vw-plugin-wrapper, .vw-access-button').forEach(el => el.remove());
+  document
+    .querySelectorAll('script[src*="vlibras-plugin.js"]')
+    .forEach((s) => s.remove());
+  document
+    .querySelectorAll(".vw-plugin-wrapper, .vw-access-button")
+    .forEach((el) => el.remove());
   // Adiciona o script VLibras novamente
-  const script = document.createElement('script');
-  script.src = 'https://vlibras.gov.br/app/vlibras-plugin.js';
+  const script = document.createElement("script");
+  script.src = "https://vlibras.gov.br/app/vlibras-plugin.js";
   script.onload = () => {
     setTimeout(() => {
       if (window.VLibras && window.VLibras.Widget) {
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget("https://vlibras.gov.br/app");
       }
     }, 100);
   };
@@ -35,27 +39,50 @@ window.navigateTo = navigateTo;
 
 const routes = {
   "": { page: "pages/home.html", css: ["css/home.css"] },
-  "solicitacao-de-remocao": { page: "pages/solicitacao-de-remocao.html", css: ["css/solicitacao.css"] },
-  "noticias": { page: "pages/noticias.html", css: ["css/noticias.css"] },
-  "institucional": { page: "pages/institucional.html", css: ["css/institucional.css"] },
-  "perfil-do-profissional": { page: "pages/perfil-do-profissional.html", css: ["css/perfil_profissional.css"] },
-  "noticia-unica-1": { page: "pages/noticia-unica-1.html", css: ["css/noticia-unica.css"] },
-  "consultaProtocolo": { page: "pages/consultaProtocolo.html", css: ["css/consulta-protocolo.css"] },
-  "retorno-protocolo": { page: "pages/retorno-protocolo.html", css: ["css/retorno-protocolo.css"] },
-  "solicitar": { page: "pages/solicitar.html", css: ["css/solicitar.css"] },
-  "sistema-de-triagem": { page: "pages/sistema-de-triagem.html", css: ["css/triagem.css"] },
+  "solicitacao-de-remocao": {
+    page: "pages/solicitacao-de-remocao.html",
+    css: ["css/solicitacao.css"],
+  },
+  noticias: { page: "pages/noticias.html", css: ["css/noticias.css"] },
+  institucional: {
+    page: "pages/institucional.html",
+    css: ["css/institucional.css"],
+  },
+  "perfil-do-profissional": {
+    page: "pages/perfil-do-profissional.html",
+    css: ["css/perfil_profissional.css"],
+  },
+  "noticia-unica-1": {
+    page: "pages/noticia-unica-1.html",
+    css: ["css/noticia-unica.css"],
+  },
+  consultaProtocolo: {
+    page: "pages/consultaProtocolo.html",
+    css: ["css/consulta-protocolo.css"],
+  },
+  "retorno-protocolo": {
+    page: "pages/retorno-protocolo.html",
+    css: ["css/retorno-protocolo.css"],
+  },
+  solicitar: { page: "pages/solicitar.html", css: ["css/solicitar.css"] },
+  "sistema-de-triagem": {
+    page: "pages/sistema-de-triagem.html",
+    css: ["css/triagem.css"],
+  },
 };
 
 function setPageCSS(cssList) {
   // Remove CSS antigos de página
-  document.querySelectorAll('link[data-router-css]').forEach(link => link.remove());
+  document
+    .querySelectorAll("link[data-router-css]")
+    .forEach((link) => link.remove());
   // Adiciona novos CSS
   if (cssList && cssList.length) {
-    cssList.forEach(cssPath => {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
+    cssList.forEach((cssPath) => {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
       link.href = cssPath;
-      link.setAttribute('data-router-css', 'true');
+      link.setAttribute("data-router-css", "true");
       document.head.appendChild(link);
     });
   }

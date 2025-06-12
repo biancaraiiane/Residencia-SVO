@@ -4,7 +4,7 @@ class Footer extends HTMLElement {
             <footer id="footer">
                 <div class="footerTop">
                     <div class="logoContainer">
-                        <img class="logoFooter" src="../assets/logo svo branco.png" alt="Logo SVO">
+                        <img class="logoFooter" src="assets/logo svo branco.png" alt="Logo SVO">
                     </div>
                     
                     <div class="footerSection">
